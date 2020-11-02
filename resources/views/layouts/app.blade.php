@@ -11,6 +11,21 @@
     <!-- Favicon icon -->
     <link rel="icon" type="image/png" sizes="16x16" href="../assets/images/favicon.png">
     <title>Elite Admin Template - The Ultimate Multipurpose admin template</title>
+    <script src="https://js.pusher.com/6.0/pusher.min.js"></script>
+      <script>
+     
+        //Enable pusher logging - don't include this in production
+        Pusher.logToConsole = true;
+     
+        var pusher = new Pusher('{{ config('test.pusher_key')}}', {
+          cluster: '{{config('test.pusher_cluster')}}'
+        });
+     
+        var channel = pusher.subscribe('{{config('test.channel')}}');
+        channel.bind('App\\Events\\NotifPusherEvent', function(data) {
+          alert(JSON.stringify(data));
+        });
+      </script>
     <!-- Custom CSS -->
     <link href="/dist/css/style.min.css" rel="stylesheet">
     <link rel="stylesheet" href="/assets/node_modules/dropify/dist/css/dropify.min.css">
