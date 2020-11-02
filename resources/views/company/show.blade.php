@@ -50,7 +50,7 @@
                                 <button class="btn btn-circle btn-secondary"><i class="fa fa-facebook"></i></button>
                                 <button class="btn btn-circle btn-secondary"><i class="fa fa-twitter"></i></button>
                                 <button class="btn btn-circle btn-secondary"><i class="fa fa-youtube"></i></button>
-                                <button class="btn btn-circle btn-secondary"><i class="fa fa-pencil"></i></button>
+                                <button type="cancel"  class="btn btn-circle btn-secondary"><i class="fa fa-pencil"></i></button>
                             </div>
                         </div>
                     </div>

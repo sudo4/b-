@@ -63,6 +63,7 @@
                                                     <div class="form-group">
                                                      <button type="submit" class="btn btn-primary px-5"><i class="icon-check"></i> Simpan</button>
                                                    </div>
+                                                </form>
                                             </div>
                                             
                                         </div>
