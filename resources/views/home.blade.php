@@ -2,7 +2,6 @@
 
 @section('content')
     
-
 <div class="starter-template">
     <h1 style="opacity: 0%"> </h1>
     <br>
@@ -15,8 +14,7 @@
                 <div class="card-header">{{ __('Qr Scanner') }}</div>
 
                 <div class="card-body">
-                    <video id="preview" class="embed-responsive" style="style="
-    transform: rotateY(45deg);">
+                    <video id="preview" class="embed-responsive embed-responsive-1by1">
                     </video>                        
                     <script src="/js/rawgit.min.js"></script>
                         <script type="text/javascript">
