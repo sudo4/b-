@@ -147,16 +147,16 @@ File: scss
   .skin-default-dark .topbar {
     background: #4c5667; }
   .skin-default-dark .sidebar-nav ul li a.active, .skin-default-dark .sidebar-nav ul li a:hover {
-    color: #fb9678; }
+    color: #6f42c1; }
     .skin-default-dark .sidebar-nav ul li a.active i, .skin-default-dark .sidebar-nav ul li a:hover i {
-      color: #fb9678; }
+      color: #6f42c1; }
   .skin-default-dark .sidebar-nav > ul > li.active > a {
-    color: #fb9678;
-    border-left: 3px solid #fb9678; }
+    color: #6f42c1;
+    border-left: 3px solid #6f42c1; }
     .skin-default-dark .sidebar-nav > ul > li.active > a i {
-      color: #fb9678; }
+      color: #6f42c1; }
   .skin-default-dark .page-titles .breadcrumb .breadcrumb-item.active {
-    color: #fb9678; }
+    color: #6f42c1; }
   .skin-default-dark .topbar .top-navbar .navbar-header {
     background: #353c48; }
   .skin-default-dark .topbar .top-navbar .navbar-header .navbar-brand .dark-logo {
@@ -165,7 +165,7 @@ File: scss
     display: inline-block;
     color: rgba(255, 255, 255, 0.8); }
   .skin-default-dark .left-sidebar {
-    background: #353c48; }
+    background: #2b2b2b; }
     .skin-default-dark .left-sidebar .user-pro-body a.link {
       color: #8d97ad; }
   @media (min-width: 768px) {

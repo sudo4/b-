@@ -9,8 +9,8 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <!-- Favicon icon -->
-    <link rel="icon" type="image/png" sizes="16x16" href="../assets/images/favicon.png">
-    <title>Elite Admin Template - The Ultimate Multipurpose admin template</title>
+    <link rel="icon" type="image/png" sizes="16x16" href="../assets/images/logo.svg">
+    <title>Munas APJATI 2020</title>
     <script src="https://js.pusher.com/6.0/pusher.min.js"></script>
       <script>
      
@@ -48,10 +48,12 @@
     <!-- ============================================================== -->
     <!-- Preloader - style you can find in spinners.css -->
     <!-- ============================================================== -->
-    <div class="preloader">
+    <div class="preloader bg-secondary">
         <div class="loader">
-            <div class="loader__figure"></div>
-            <p class="loader__label">APJATI</p>
+            <div class="loader__figure" style="background-image: url(../assets/images/logo.svg)">
+              <!--   <img src="../assets/images/favicon.png"> -->
+            </div>
+            <h1 class="loader__label text-white">Munas APJATI 2020</h1>
         </div>
     </div>
     <!-- ============================================================== -->
