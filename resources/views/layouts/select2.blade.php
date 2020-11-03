@@ -12,7 +12,10 @@
             new Switchery($(this)[0], $(this).data());
         });
         // For select 2
-        $(".select2").select2();
+        $(".select2").select2({
+              placeholder: 'Masukkan Nama Perusahaan',
+              minimumInputLength: 3,
+            });
         $('.selectpicker').selectpicker();
         //Bootstrap-TouchSpin
         $(".vertical-spin").TouchSpin({

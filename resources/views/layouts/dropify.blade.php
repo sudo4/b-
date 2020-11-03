@@ -2,12 +2,19 @@
     <script>
     $(document).ready(function() {
         // Basic
-        $('.dropify').dropify();
+        $('.dropify').dropify({
+            messages: {
+                default: 'Upload dan Tarik Foto Disini',
+                replace: 'Glissez-déposez un fichier ou cliquez pour remplacer',
+                remove: 'Supprimer',
+                error: 'Désolé, le fichier trop volumineux'
+            }
+        });
 
         // Translated
         $('.dropify-fr').dropify({
             messages: {
-                default: 'Glissez-déposez un fichier ici ou cliquez',
+                default: 'Upload dan Tarik Foto Disini',
                 replace: 'Glissez-déposez un fichier ou cliquez pour remplacer',
                 remove: 'Supprimer',
                 error: 'Désolé, le fichier trop volumineux'

@@ -15,64 +15,12 @@
                                 <li class="breadcrumb-item"><a href="javascript:void(0)">Home</a></li>
                                 <li class="breadcrumb-item active">Datatable</li>
                             </ol>
-                            <button type="button" data-toggle="modal" data-target="#myModal" class="btn btn-info d-none d-lg-block m-l-15"><i class="fa fa-plus-circle"></i> Create New</button>
+                            <a href="{{route('member.create')}}" class="btn btn-info d-none d-lg-block m-l-15"><i class="fa fa-plus-circle"></i> Create New</a>
+
                         </div>
                     </div>
                 </div>
-                <div class="row">
 
-                    <div class="col-md-4">
-                        <div class="">
-                            <div class="card-body">
-                                <!-- sample modal content -->
-                                <div id="myModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-                                    <div class="modal-dialog">
-                                        <div class="modal-content bg-secondary">
-                                            <div class="modal-header">
-                                                <h4 class="modal-title" id="myModalLabel">Tambah Data</h4>
-                                                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-                                            </div>
-                                            <div class="modal-body">
-                                                <form action="{{route('member.store')}}", method="post">
-			                                        @csrf
-			                                        <div class="form-group">
-			                                          <label for="input-1">Nama</label>
-			                                          <input type="text" class="form-control" id="input-1" placeholder="Masukkan Nama" required name="nama" value="{{old('nama')}}">
-			                                        </div>
-			                                        <div class="form-group">
-			                                            <label for="input-1">NIK</label>
-			                                            <input type="number" class="form-control" id="input-1" placeholder="Masukkan NIK" required name="nik" value="{{old('nik')}}">
-			                                        </div>
-			                                        <div class="form-group">
-			                                            <label for="input-1">No Handphone</label>
-			                                            <input type="number" class="form-control" id="input-1" placeholder="Masukkan No Handphone" required name="phone" value="{{old('phone')}}">
-			                                        </div>
-			                                        <h4 class="form-header text-uppercase">
-			                                        </h4>
-			                                        <br>
-			                                        <div class="form-group">
-			                                         <button type="submit" class="btn btn-primary icheck-material-primary"> 
-			                                          <input id="primary1" type="radio" name="konfirmasi" value="tidak_hadir" checked="tidak_hadir" style="opacity: 0%">
-			                                          Simpan
-			                                          <input id="primary1" type="radio" name="konfirmasi" style="opacity: 0%">
-			                                      	</button>
-			                                          
-			                                       </div>
-			                                   </form>
-                                            </div>
-                                            
-                                        </div>
-                                        <!-- /.modal-content -->
-                                    </div>
-                                    <!-- /.modal-dialog -->
-                                </div>
-                                <!-- /.modal -->
-
-                            </div>
-                        </div>
-                    </div>
-                    
-                </div>
                 <div class="row">
                     <div class="col-12">
                         <div class="card">
