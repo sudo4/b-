@@ -36,6 +36,13 @@
                                 <li><a href="/member">Delegasi</a></li>
                             </ul>
                         </li>
+                        <li> <a class="has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false"><i class="icon-speedometer"></i><span class="hide-menu">Profile</span></a>
+                            <ul aria-expanded="false" class="collapse">
+                                <li><a href="/company">P3MI </a></li>
+                                <li><a href="/visitor">Pengunjung</a></li>
+                                <li><a href="/member">Delegasi</a></li>
+                            </ul>
+                        </li>
 
                         <li> <a class="waves-effect waves-dark" href="../documentation/documentation.html" aria-expanded="false"><i class="fa fa-circle-o text-danger"></i><span class="hide-menu">Documentation</span></a></li>
                         <li> <a class="waves-effect waves-dark" href="pages-login.html" aria-expanded="false"><i class="fa fa-circle-o text-success"></i><span class="hide-menu">Log Out</span></a></li>

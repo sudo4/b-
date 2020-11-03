@@ -30,20 +30,34 @@
                                 <h4 class="card-title">Tambah Data Baru</h4>
                                 <h6 class="card-subtitle"> Peserta Munas APJATI 2020</h6>
                                 <div class="form-group">
-                                  <input type="text" class="form-control" id="input-1" placeholder="Masukkan Nama" required name="nama" value="{{old('nama')}}">
+                                  <input type="text" class="form-control" id="input-1" placeholder="Masukkan Nama" required name="nama" autocomplete="off" value="{{old('nama')}}">
                                 </div>
-                                <select class="select2 form-control custom-select" style="width: 100%; height:36px;">
-                                    <option label="Pacific Time Zone">
-                                        @foreach ($company as $company)
-                                            <option required value="{{ $company->id }}">{{ $company->nama }}</option>  
-                                        @endforeach
-                                    </option>
-                                </select>
+                                <div class="form-group">
+                                    <select class="select2 form-control custom-select" style="width: 100%; height:36px;">
+                                        <option label="Pacific Time Zone">
+                                            @foreach ($company as $company)
+                                                <option required value="{{ $company->id }}">{{ $company->nama }}</option>  
+                                            @endforeach
+                                        </option>
+                                    </select>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <input type="number" class="form-control" id="input-1" autocomplete="off" placeholder="Masukkan Nomor Ponsel" required name="no_hp" value="{{old('no_hp')}}">
+                                </div>
+                                <div class="form-group"> <input type="file" id="input-file-now" class="dropify" /></div>
+                                
 
                                 <div class="form-group">
-                                    <input type="number" class="form-control" id="input-1" placeholder="Masukkan Nomor Ponsel" required name="no_hp" value="{{old('no_hp')}}">
+                                    <div class="form-group">
+                                          <button type="submit" class="btn btn-primary icheck-material-primary"> 
+                                            <input id="primary1" type="radio" name="kehadiran" value="tidak_hadir" checked="tidak_hadir" style="opacity: 0%">
+                                            Simpan
+                                            <input id="primary1" type="radio" name="kehadiran" style="opacity: 0%">
+
+                                          </button>
+                                        </div>
                                 </div>
-                                <input type="file" id="input-file-now" class="dropify" />
                             </div>
                         </div>
                     </div>

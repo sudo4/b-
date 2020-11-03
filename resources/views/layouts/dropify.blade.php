@@ -5,9 +5,9 @@
         $('.dropify').dropify({
             messages: {
                 default: 'Upload dan Tarik Foto Disini',
-                replace: 'Glissez-déposez un fichier ou cliquez pour remplacer',
-                remove: 'Supprimer',
-                error: 'Désolé, le fichier trop volumineux'
+                replace: 'Ganti Foto',
+                remove: 'Hapus Foto',
+                error: 'Kayanya Foto Yang Kamu Masukin Rusak'
             }
         });
 
