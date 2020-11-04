@@ -24,7 +24,7 @@
                     <div class="col-lg-4">
                         <div class="card"> <img class="card-img"  height="456" alt="Card image">
                             <div class="card-img-overlay card-inverse text-white social-profile d-flex justify-content-center">
-                                <div class="align-self-center"> <img src="../assets/images/users/1.jpg" class="img-circle" width="100">
+                                <div class="align-self-center"> <img src="/assets/images/icon/staff.png" class="img-circle" width="100">
                                     <h4 class="card-title"></h4>
                                     <h4 class="card-title">{{$visitor->nama}}</h4>
                                     <h6 class="card-subtitle">{{$visitor->nik}}</h6>
@@ -43,7 +43,7 @@
 			                            <form id="personal-info" action="{{route('visitor.update', $visitor->uuid)}}" method="post">
 			                                @csrf
 			                                @method('patch')
-			                                <button type="submit" href="/visitor" class="btn btn-block btn-outline-primary icheck-material-warning"> 
+			                                <button type="submit" href="/visitor" class="btn btn-block btn-outline-success icheck-material-warning"> 
 			                                    <input id="success1" type="radio" name="konfirmasi" value="hadir" checked="hadir" style="opacity: 0%">
 			                                    CONFIRM
 			                                    <input id="success1" type="radio" name="konfirmasi" style="opacity: 0%"> 

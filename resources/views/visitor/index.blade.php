@@ -92,7 +92,7 @@
                                 	<tbody>
 		                                    @foreach($visitor as $a)
 		                                    <tr>
-		                                        <td>{{ $a->nama }}</td>
+		                                        <td> <a href="{{route('visitor.edit', $a->uuid)}}">{{ $a->nama }}</a></td>
 		                                        <td>{{ $a->nik }}</td>
 		                                        <td>{{ $a->phone }}</td>
 		                                        <td class="text-center">
