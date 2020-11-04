@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <!-- Favicon icon -->
-    <link rel="icon" type="image/png" sizes="16x16" href="../assets/images/logo.svg">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/logo.svg">
     <title>Munas APJATI 2020</title>
     <script src="https://js.pusher.com/6.0/pusher.min.js"></script>
       <script>
@@ -50,8 +50,8 @@
     <!-- ============================================================== -->
     <div class="preloader bg-secondary">
         <div class="loader">
-            <div class="loader__figure" style="background-image: url(../assets/images/logo.svg)">
-              <!--   <img src="../assets/images/favicon.png"> -->
+            <div class="loader__figure" style="background-image: url(/assets/images/logo.svg)">
+              <!--   <img src="/assets/images/favicon.png"> -->
             </div>
             <h1 class="loader__label text-white">Munas APJATI 2020</h1>
         </div>

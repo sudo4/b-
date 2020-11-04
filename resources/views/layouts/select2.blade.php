@@ -1,9 +1,9 @@
-<script src="../assets/node_modules/switchery/dist/switchery.min.js"></script>
-    <script src="../assets/node_modules/select2/dist/js/select2.full.min.js" type="text/javascript"></script>
-    <script src="../assets/node_modules/bootstrap-select/bootstrap-select.min.js" type="text/javascript"></script>
-    <script src="../assets/node_modules/bootstrap-tagsinput/dist/bootstrap-tagsinput.min.js"></script>
-    <script src="../assets/node_modules/bootstrap-touchspin/dist/jquery.bootstrap-touchspin.js" type="text/javascript"></script>
-    <script type="text/javascript" src="../assets/node_modules/multiselect/js/jquery.multi-select.js"></script>
+<script src="/assets/node_modules/switchery/dist/switchery.min.js"></script>
+    <script src="/assets/node_modules/select2/dist/js/select2.full.min.js" type="text/javascript"></script>
+    <script src="/assets/node_modules/bootstrap-select/bootstrap-select.min.js" type="text/javascript"></script>
+    <script src="/assets/node_modules/bootstrap-tagsinput/dist/bootstrap-tagsinput.min.js"></script>
+    <script src="/assets/node_modules/bootstrap-touchspin/dist/jquery.bootstrap-touchspin.js" type="text/javascript"></script>
+    <script type="text/javascript" src="/assets/node_modules/multiselect/js/jquery.multi-select.js"></script>
     <script>
     jQuery(document).ready(function() {
         // Switchery

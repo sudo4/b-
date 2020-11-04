@@ -27,12 +27,20 @@ class MemberController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+
+    public function member()
+    {
+        $member = Member::where('kehadiran', 'hadir')->first();
+        $company = Company::all();
+        
+        return view('profile.index', compact('company', 'member'));
+    }
+
     public function create()
     {
         $company = Company::all();
         $member = Member::all();
         return view('member.create', compact('member', 'company'));
-
 
     }
 
