@@ -40,7 +40,7 @@ class UsersController extends Controller
             'roles' => $roles,
         ];
 
-        return view('admin.users.users_create',)->with($params);
+        return view('admin.users.users_create')->with($params);
     }
 
     // Store New User
