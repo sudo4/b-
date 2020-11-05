@@ -4,20 +4,9 @@
                 <!-- User Profile-->
                 <div class="user-profile">
                     <div class="user-pro-body">
-                        <div><img src="/assets/images/icon/staff.png" alt="user-img" class="img-circle"></div>
-                        <div class="dropdown">
-                            <a href="javascript:void(0)" class="dropdown-toggle u-dropdown link hide-menu" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Hi, {{ucwords(\Auth::user()->name)}} <span class="caret"></span></a>
-                            <div class="dropdown-menu animated flipInY">
-                                <!-- text-->
-                                
-                                <!-- text-->
-                                <a href="javascript:void(0)" class="dropdown-item"><i class="ti-settings"></i> Account Setting</a>
-                                <!-- text-->
-                                <div class="dropdown-divider"></div>
-                                <!-- text-->
-                                <a href="{{ route('logout') }}" onclick="event.preventDefault();document.getElementById('logout-form').submit();" style="color: #ffffff;"class="dropdown-item"><i class="fa fa-power-off"></i> {{ __('Logout') }} </a> <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none"> @csrf </form>
-                                <!-- text-->
-                            </div>
+                        <div class="text-center">
+                            <img src="/assets/images/icon/staff.png" alt="user-img" class="img-circle">
+                            <p>Hi, {{ucwords(\Auth::user()->name)}} <br> {{\Auth::user()->email}}</p>
                         </div>
                     </div>
                 </div>
@@ -36,16 +25,23 @@
                                 <li><a href="/member">Delegasi</a></li>
                             </ul>
                         </li>
-                        <li> <a class="has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false"><i class="icon-speedometer"></i><span class="hide-menu">Profile</span></a>
+                        <li> <a class="has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false"><i class="icon-speedometer"></i><span class="hide-menu">Absensi</span></a>
                             <ul aria-expanded="false" class="collapse">
-                                <li><a href="/company">P3MI </a></li>
-                                <li><a href="/visitor">Pengunjung</a></li>
-                                <li><a href="/member">Delegasi</a></li>
+                                <li><a href="/profile">Delegasi </a></li>
                             </ul>
                         </li>
 
-                        <li> <a class="waves-effect waves-dark" href="../documentation/documentation.html" aria-expanded="false"><i class="fa fa-circle-o text-danger"></i><span class="hide-menu">Documentation</span></a></li>
-                        <li> <a class="waves-effect waves-dark" href="pages-login.html" aria-expanded="false"><i class="fa fa-circle-o text-success"></i><span class="hide-menu">Log Out</span></a></li>
+                        <li> <a class="has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false"><i class="icon-speedometer"></i><span class="hide-menu">Backend</span></a>
+                            <ul aria-expanded="false" class="collapse">
+                                <li><a href="/admin/users">User </a></li>
+                                <li><a href="/">Roles </a></li>
+                                <li><a href="/">Permission </a></li>
+                            </ul>
+                        </li>
+
+
+                        <li> <a class="waves-effect waves-dark" href="/documentation/documentation.html" aria-expanded="false"><i class="fa fa-circle-o text-danger"></i><span class="hide-menu">Documentation</span></a></li>
+                        <li> <a class="waves-effect waves-dark" href="{{ route('logout') }}" onclick="event.preventDefault();document.getElementById('logout-form').submit();"><i class="fa fa-circle-o"></i> {{ __('Logout') }} </a> <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none"> @csrf </form></li>
                         <li> <a class="waves-effect waves-dark" href="pages-faq.html" aria-expanded="false"><i class="fa fa-circle-o text-info"></i><span class="hide-menu">FAQs</span></a></li>
                     </ul>
                 </nav>

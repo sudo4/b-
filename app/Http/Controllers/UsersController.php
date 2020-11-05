@@ -21,13 +21,13 @@ class UsersController extends Controller
     public function index()
     {
         $users = User::paginate(10);
-        
+        $roles = Role::all();
         $params = [
             'title' => 'Users Listing',
             'users' => $users,
         ];
 
-        return view('admin.users.users_list')->with($params);
+        return view('admin.users.users_list', compact('users', 'roles'))->with($params);
     }
 
     // Create User Page
@@ -40,7 +40,7 @@ class UsersController extends Controller
             'roles' => $roles,
         ];
 
-        return view('admin.users.users_create')->with($params);
+        return view('admin.users.users_create',)->with($params);
     }
 
     // Store New User

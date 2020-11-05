@@ -31,6 +31,7 @@
     <link rel="stylesheet" href="/assets/node_modules/dropify/dist/css/dropify.min.css">
     <link href="/assets/node_modules/select2/dist/css/select2.min.css" rel="stylesheet" type="text/css" />
     <link rel="stylesheet" type="text/css" href="/js/instascan.min.js">
+    <link href="dist/css/pages/user-card.css" rel="stylesheet">
 
     <script type="text/javascript" src="/js/instascan.min.js"></script>
     <script type="text/javascript" src="/js/jquery.min.js"></script>
@@ -123,6 +124,7 @@
     @include('layouts.datatable')
     @include('layouts.dropify')
     @include('layouts.select2')
+    @include('layouts.magnific')
 </body>
 
 </html>
