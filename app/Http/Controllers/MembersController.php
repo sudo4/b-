@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Absensi;
+use App\Models\Members;
 use App\Models\Member;
 use App\Models\Company;
 use Illuminate\Http\Request;
@@ -81,7 +81,7 @@ class MembersController extends Controller
             'absensi'
         ]);
 
-        $member = Member::where('kehadiran', 'hadir');
+        $member = Member::where('uuid', $id)->first();
         DB::beginTransaction();
 
         try {

@@ -18,18 +18,20 @@ Route::get('/', function () {
 });
 
 
-
+Route::get('/add-to-log', 'LogController@myTestAddToLog');
+Route::get('/logActivity', 'LogController@logActivity');
 
 
 
 Auth::routes(['register'=> false, 'reset'=>false]);
 
-
+   
 
 Route::group(['prefix' => 'admin', 'middleware' => 'auth', 'middleware' => ['role:administrator|superadministrator'], 'namespace' => 'Admin'], function () {
     Route::resource('users', 'UsersController');
     Route::resource('permission', 'PermissionController');
     Route::resource('roles', 'RolesController');
+
 });
 
 Route::group(['middleware' => ['auth']], function() {

@@ -30,22 +30,22 @@
                                     <h6 class="card-subtitle">{{$member->company['nama']}}</h6>
                                     <h6 class="card-subtitle">{{$member->no_hp}}</h6>
                                     <div class="text-white">
-                                    	<form id="personal-info" action="{{route('member.update', $member->uuid)}}" method="post">
+                                    	<form id="personal-info" action="{{route('profile.update', $member->uuid)}}" method="post">
 			                                @csrf
 			                                @method('patch')
-			                                <button type="submit" href="/visitor" class="btn btn-block btn-outline-warning icheck-material-primary"> 
-			                                    <input id="success1" type="radio" name="kehadiran" value="tidak_hadir" checked="tidak_hadir" style="opacity: 0%">
-			                                    CANCEL
+			                                <button type="submit" href="/home" class="btn btn-block btn-outline-warning icheck-material-primary"> 
+			                                    <input id="success1" type="radio" name="absensi" value="Keluar" checked="Keluar" style="opacity: 0%">
+			                                    KELUAR
 			                                    <input id="success1" type="radio" name="konfirmasi" style="opacity: 0%"> 
 			                                </button>
 			                            </form>
 			                            <br>
-			                            <form id="personal-info" action="{{route('member.update', $member->uuid)}}" method="post">
+			                            <form id="personal-info" action="{{route('profile.update', $member->uuid)}}" method="post">
 			                                @csrf
 			                                @method('patch')
-			                                <button type="submit" href="/member" class="btn btn-block btn-outline-primary icheck-material-warning"> 
-			                                    <input id="success1" type="radio" name="kehadiran" value="hadir" checked="hadir" style="opacity: 0%">
-			                                    CONFIRM
+			                                <button type="submit" href="/home" class="btn btn-block btn-outline-primary icheck-material-warning"> 
+			                                    <input id="success1" type="radio" name="absensi" value="Masuk" checked="Masuk" style="opacity: 0%">
+			                                    MASUK
 			                                    <input id="success1" type="radio" name="konfirmasi" style="opacity: 0%"> 
 			                                </button>
 			                            </form>
