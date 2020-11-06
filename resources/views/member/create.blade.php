@@ -33,7 +33,7 @@
                                   <input type="text" class="form-control" id="input-1" placeholder="Masukkan Nama" required name="nama" autocomplete="off" value="{{old('nama')}}">
                                 </div>
                                 <div class="form-group">
-                                    <select class="select2 form-control custom-select" name="company_id style="width: 100%; height:36px;">
+                                    <select class="select2 form-control custom-select" name="company_id" style="width: 100%; height:36px;">
                                         <option label="Pacific Time Zone">
                                             @foreach ($company as $company)
                                                 <option required value="{{ $company->id }}">{{ $company->nama }}</option>  

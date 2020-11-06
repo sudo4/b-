@@ -2,7 +2,6 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Members;
 use App\Models\Member;
 use App\Models\Company;
 use Illuminate\Http\Request;
@@ -77,11 +76,11 @@ class MembersController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $this ->validate($request,[
+       $this ->validate($request,[
             'absensi'
         ]);
 
-        $member = Member::where('uuid', $id)->first();
+        $member = Member::where('kehadiran', 'hadir');
         DB::beginTransaction();
 
         try {
