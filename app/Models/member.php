@@ -20,11 +20,19 @@ class Member extends Model
         'photo',
         'kehadiran',
         'absensi',
+        'komisi',
+        'confirm_by',
+        'komisi_confirm'
        
     ];
 
     public function company()
     {
-        return $this->belongsTo('App\Models\Company');
+        return $this->belongsTo('App\Models\company');
+    }
+
+    public function absensi()
+    {
+        return $this->belongsTo('App\Models\absensi');
     }
 }

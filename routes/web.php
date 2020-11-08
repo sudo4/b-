@@ -40,6 +40,7 @@ Route::group(['middleware' => ['auth']], function() {
 		Route::resource('/company', 'CompanyController');
 		Route::resource('/visitor', 'VisitorController');
 		Route::resource('/member', 'MemberController');
-		Route::resource('/profile', 'MembersController');
+        Route::resource('/absensi', 'AbsensiController');
+        Route::get('/history', 'AbsensiController@history');
     });
 });

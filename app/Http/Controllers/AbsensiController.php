@@ -2,14 +2,16 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Member;
-use App\Models\Company;
+use App\Models\absensi;
+use App\Models\member;
+use App\Models\company;
 use Illuminate\Http\Request;
 use DB;
 use Auth;
 use Carbon;
 
-class MembersController extends Controller
+
+class AbsensiController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -20,7 +22,13 @@ class MembersController extends Controller
     {
         $member = Member::where('kehadiran', 'hadir')->get();
         $company = Company::all();
-        return view('profile.index', compact('member', 'company'));
+        return view('absensi.index', compact('member', 'company'));
+    }
+
+    public function history()
+    {
+        $absensi = Absensi::all();
+        return view('history.index', compact('absensi'));
     }
     /**
      * Show the form for creating a new resource.
@@ -40,29 +48,57 @@ class MembersController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $this->validate($request, [
+            'nama',
+            'member_id',
+            'absensi',
+            'komisi',
+            'confirm_by',
+            'komisi_confirm'
+        ]);
+        
+        $member = Member::where('kehadiran', 'hadir');
+        $absensi = Absensi::all();
+        db::beginTransaction();
+
+        try {
+            $absensi = Absensi::create([
+                'nama' => $request->nama,
+                'member_id' => $request->member_id,
+                'absensi' => $request->absensi,
+                'komisi' => $request->komisi,
+                'confirm_by' => $request->confirm_by,
+                'komisi_confirm' => $request->komisi_confirm,
+            ]);
+            db::commit();
+            return view('/home');
+        } catch (\Exception $e) {
+            DB::rollBack();
+            dd($e);
+        }
+
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  int  $id
+     * @param  \App\Models\absensi  $absensi
      * @return \Illuminate\Http\Response
      */
     public function show($id)
     {
         $member = Member::where('uuid', $id)->first();  
         $company = Company::all();
-        return view('profile.show', compact('member', 'company'));
+        return view('absensi.show', compact('member', 'company'));
     }
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  int  $id
+     * @param  \App\Models\absensi  $absensi
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(absensi $absensi)
     {
         //
     }
@@ -71,13 +107,16 @@ class MembersController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
+     * @param  \App\Models\absensi  $absensi
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, $id)
     {
-       $this ->validate($request,[
-            'absensi'
+        $this ->validate($request,[
+            'absensi',
+            'komisi',
+            'confirm_by',
+            'komisi_confirm',
         ]);
 
         $member = Member::where('kehadiran', 'hadir');
@@ -89,7 +128,14 @@ class MembersController extends Controller
                     'absensi' => $request->absensi,
                     'confirm_by' => Auth::user()->name,
                 ];
-            } 
+            }elseif($request->has('komisi')){
+                $data = [
+                    'komisi' => $request->komisi,
+                    'komisi_confirm' => Auth::user()->name
+                ];
+            }
+                
+            
 
             $member->update($data);
             DB::commit();
@@ -105,10 +151,10 @@ class MembersController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  int  $id
+     * @param  \App\Models\absensi  $absensi
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(absensi $absensi)
     {
         //
     }

@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateMembersTable extends Migration
+class CreateAbsensisTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,19 +13,15 @@ class CreateMembersTable extends Migration
      */
     public function up()
     {
-        Schema::create('members', function (Blueprint $table) {
+        Schema::create('absensis', function (Blueprint $table) {
             $table->id();
             $table->uuid('uuid');
             $table->string('nama');
-            $table->string('company_id');
-            $table->string('no_hp', 12)->unique();
-            $table->text('photo');
-            $table->enum('kehadiran', ['hadir', 'tidak_hadir'])->nullable();
+            $table->string('member_id');
             $table->enum('absensi', ['Masuk', 'Keluar'])->nullable();
             $table->enum('komisi', ['1', '2', '3'])->nullable();
             $table->string('confirm_by')->nullable();
             $table->string('komisi_confirm')->nullable();
-            $table->softDeletes();
             $table->timestamps();
         });
     }
@@ -37,6 +33,6 @@ class CreateMembersTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('members');
+        Schema::dropIfExists('absensis');
     }
 }

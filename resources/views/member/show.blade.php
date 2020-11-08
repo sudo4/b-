@@ -28,32 +28,25 @@
                                     <h4 class="card-title"></h4>
                                     <h4 class="card-title">{{$member->nama}}</h4>
                                     <h6 class="card-subtitle">{{$member->company['nama']}}</h6>
-                                    <h6 class="card-subtitle">{{$member->no_hp}}</h6>
-                                    <div class="text-white">
-                                    	<form id="personal-info" action="{{route('member.update', $member->uuid)}}" method="post">
-			                                @csrf
-			                                @method('patch')
-			                                <button type="submit" href="/visitor" class="btn btn-block btn-outline-warning icheck-material-primary"> 
-			                                    <input id="success1" type="radio" name="kehadiran" value="tidak_hadir" checked="tidak_hadir" style="opacity: 0%">
-			                                    CANCEL
-			                                    <input id="success1" type="radio" name="konfirmasi" style="opacity: 0%"> 
-			                                </button>
-			                            </form>
-			                            <br>
-			                            <form id="personal-info" action="{{route('member.update', $member->uuid)}}" method="post">
-			                                @csrf
-			                                @method('patch')
-			                                <button type="submit" href="/member" class="btn btn-block btn-outline-primary icheck-material-warning"> 
-			                                    <input id="success1" type="radio" name="kehadiran" value="hadir" checked="hadir" style="opacity: 0%">
-			                                    CONFIRM
-			                                    <input id="success1" type="radio" name="konfirmasi" style="opacity: 0%"> 
-			                                </button>
-			                            </form>
-			                            <br>
-			                            @role('superadministrator')
-					                    
-					         
-					                          <button class="btn btn-block btn-outline-info icheck-material-primary" data-toggle="modal" data-target="#smallsizemodal">QRCODE</button>
+									<h6 class="card-subtitle">{{$member->no_hp}}</h6>
+									<div class="btn-group">
+										<div class="col-lg-6">
+											<a class="btn btn-block btn-outline-primary" href="/home" onclick="event.preventDefault();document.getElementById('hadir').submit();" >{{ __('CONFIRM') }} </a> 
+											<form id="hadir" action="{{route('member.update', $member->uuid)}}" method="post" class="d-none"> @csrf @method('patch')
+												<input id="hadir" type="" name="kehadiran" value="hadir" checked="hadir" >
+											</form>
+										</div>
+										<div class="col-lg-6">
+											<a class="btn btn-block btn-outline-danger" href="/home" onclick="event.preventDefault();document.getElementById('tidak_hadir').submit();" >{{ __('CANCEL') }} </a> 
+											<form id="tidak_hadir" action="{{route('member.update', $member->uuid)}}" method="post" class="d-none"> @csrf @method('patch')
+												<input id="tidak_hadir" type="" name="kehadiran" value="tidak_hadir" checked="tidak_hadir" >
+											</form>
+										</div>
+									</div>
+									<div class="btn-group"> 
+										@role('superadministrator')
+					                    <div class="col-lg-12">
+											<button class="btn btn-block btn-outline-info icheck-material-primary" data-toggle="modal" data-target="#smallsizemodal">QRCODE</button>
 					                          <!-- Modal -->
 					                            <div class="modal fade" id="smallsizemodal">
 					                              <div class="modal-dialog modal-sm">
@@ -68,9 +61,10 @@
 					                                </div>
 					                              </div>
 					                            </div>
-					                 
+										</div>     
 					                    @endrole 
-                                    </div>
+									</div>
+                                   
                                 </div>
                             </div>
                         </div>

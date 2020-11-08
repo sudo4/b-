@@ -27,15 +27,13 @@
                         </li>
                         <li> <a class="has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false"><i class="icon-speedometer"></i><span class="hide-menu">Absensi</span></a>
                             <ul aria-expanded="false" class="collapse">
-                                <li><a href="/profile">Delegasi </a></li>
+                                <li><a href="/absensi">Delegasi </a></li>
                             </ul>
                         </li>
 
                         <li> <a class="has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false"><i class="icon-speedometer"></i><span class="hide-menu">Backend</span></a>
                             <ul aria-expanded="false" class="collapse">
                                 <li><a href="/admin/users">User </a></li>
-                                <li><a href="/">Roles </a></li>
-                                <li><a href="/">Permission </a></li>
                             </ul>
                         </li>
 

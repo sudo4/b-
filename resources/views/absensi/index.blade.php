@@ -39,7 +39,7 @@
                                         <tbody>
                                             @foreach($member as $a)
                                             <tr>
-                                                <td><a href="{{ route('profile.show', $a->uuid) }}" style="color: #ffffff; "><p>{{ $a->nama }}</p></a></td>
+                                                <td><a href="{{ route('absensi.show', $a->uuid) }}" style="color: #ffffff; "><p>{{ $a->nama }}</p></a></td>
                                                 <td>{{ $a->company['nama'] }}</td>
                                                 <td class="text-center">
                                                   @if($a->absensi == 'Masuk')                                                
