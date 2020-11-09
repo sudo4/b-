@@ -43,7 +43,7 @@
     <!-- ============================================================== -->
     <section id="wrapper">
         <div class="login-register">
-            <div class="login-box card" style="margin-top: -50px;">
+            <div class="login-box card">
                 <div class="card-body">
                     <form method="POST" action="{{ route('login') }}">
                                 @csrf
@@ -103,6 +103,9 @@
             </div>
         </div>
     </section>
+    <footer class="text-center">
+            © 2020 Munas APJATI 2020
+    </footer>
     
     <!-- ============================================================== -->
     <!-- End Wrapper -->

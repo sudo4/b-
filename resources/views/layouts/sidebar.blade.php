@@ -27,15 +27,20 @@
                         </li>
                         <li> <a class="has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false"><i class="icon-speedometer"></i><span class="hide-menu">Absensi</span></a>
                             <ul aria-expanded="false" class="collapse">
-                                <li><a href="/profile">Delegasi </a></li>
+                                <li><a href="/absensi">Delegasi </a></li>
+                            </ul>
+                        </li>
+                        <li> <a class="has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false"><i class="icon-speedometer"></i><span class="hide-menu">Komisi</span></a>
+                            <ul aria-expanded="false" class="collapse">
+                                <li><a href="/komisi1">Komisi 1 </a></li>
+                                <li><a href="/komisi2">Komisi 2 </a></li>
+                                <li><a href="/komisi3">Komisi 3 </a></li>
                             </ul>
                         </li>
                         @role('superadministrator')
                         <li> <a class="has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false"><i class="icon-speedometer"></i><span class="hide-menu">Backend</span></a>
                             <ul aria-expanded="false" class="collapse">
                                 <li><a href="/admin/users">User </a></li>
-                                <li><a href="/roles">Roles </a></li>
-                                <li><a href="/permission">Permission </a></li>
                             </ul>
                         </li>
                         @endrole

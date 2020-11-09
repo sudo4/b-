@@ -122,6 +122,11 @@ class MemberController extends Controller
             'no_hp',
             'photo',
             'kehadiran',
+            'komisi',
+            'absensi',
+            'komisi',
+            'confirm_by',
+            'komisi_confirm',
         ]);
 
         $member = Member::where('uuid', $id)->first();
@@ -144,7 +149,18 @@ class MemberController extends Controller
                 $data = [
                     'kehadiran' => $request->kehadiran,
                 ];
+            }elseif ($request->has('absensi')) {
+                $data = [
+                    'absensi' => $request->absensi,
+                    'confirm_by' => Auth::user()->name,
+                ];
+            }elseif ($request->has('komisi')) {
+                $data = [
+                    'komisi' => $request->komisi,
+                    'komisi_confirm' => Auth::user()->name,
+                ];
             }
+            
 
             else {
                 $data = [

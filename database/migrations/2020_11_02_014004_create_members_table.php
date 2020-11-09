@@ -22,7 +22,11 @@ class CreateMembersTable extends Migration
             $table->text('photo');
             $table->enum('kehadiran', ['hadir', 'tidak_hadir'])->nullable();
             $table->enum('absensi', ['Masuk', 'Keluar'])->nullable();
+            $table->enum('komisi', ['1', '2', '3'])->nullable();
             $table->string('confirm_by')->nullable();
+            $table->time('confirm_at')->nullable();
+            $table->string('komisi_confirm')->nullable();
+            $table->time('komisi_confirm_at')->nullable();
             $table->softDeletes();
             $table->timestamps();
         });
