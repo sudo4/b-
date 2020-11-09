@@ -35,6 +35,8 @@
 											<button class="btn btn-block btn-outline-primary" href="/home" onclick="event.preventDefault();document.getElementById('masuk').submit();">MASUK</button> 
 											<form id="masuk" action="{{route('absensi.update', $member->uuid)}}" method="POST" class="d-none"> 
 												@csrf
+												<input id="success1" type="radio" name="nama" value="{{$member->nama}}" checked="" style="opacity: 0%">
+												<input id="success1" type="radio" name="member_id" value="{{$member->company['nama']}}" checked="" style="opacity: 0%">
 												@method('patch') 
 												<input id="success1" type="radio" name="absensi" value="Masuk" checked="Masuk" style="opacity: 0%">
 											</form>
@@ -44,6 +46,9 @@
 											<button class="btn btn-block btn-outline-primary" href="/home" onclick="event.preventDefault();document.getElementById('masuk').submit();">MASUK </button>
 											<form id="masuk" action="{{route('absensi.update', $member->uuid)}}" method="POST" class="d-none"> 
 												@csrf
+												<input id="success1" type="radio" name="nama" value="{{$member->nama}}" checked="" style="opacity: 0%">
+												<input id="success1" type="radio" name="member_id" value="{{$member->company['nama']}}" checked="" style="opacity: 0%">
+												<input id="success1" type="radio" name="confirm_by" value="{{$member->confirm_by}}" checked="" style="opacity: 0%">
 												@method('patch') 
 												<input id="success1" type="radio" name="absensi" value="Masuk" checked="Masuk" style="opacity: 0%">
 											</form>
@@ -52,6 +57,8 @@
 											<button class="btn btn-block btn-outline-primary" href="/home" onclick="event.preventDefault();document.getElementById('keluar').submit();">KELUAR </button> 
 											<form id="keluar" action="{{route('absensi.update', $member->uuid)}}" method="POST" class="d-none"> 
 												@csrf
+												<input id="success1" type="radio" name="nama" value="{{$member->nama}}" checked="" style="opacity: 0%">
+												<input id="success1" type="radio" name="member_id" value="{{$member->company['nama']}}" checked="" style="opacity: 0%">
 												@method('patch') 
 												<input id="success1" type="radio" name="absensi" value="Keluar" checked="Keluar" style="opacity: 0%">
 											</form>
@@ -68,19 +75,37 @@
 						                                    	<button class="btn btn-block btn-success" href="/home" onclick="event.preventDefault();document.getElementById('komisi1').submit();">Komisi 1</button> 
 																<form id="komisi1" action="{{route('absensi.update', $member->uuid)}}" method="POST" class="d-none"> 
 																	@csrf
+																	<input id="success1" type="radio" name="nama" value="{{$member->nama}}" checked="" style="opacity: 0%">
+																	<input id="success1" type="radio" name="member_id" value="{{$member->company['nama']}}" checked="" style="opacity: 0%">
+																	<input id="success1" type="radio" name="absensi" value="Masuk" checked="" style="opacity: 0%">
+																	<input id="success1" type="radio" name="komisi" value="1" checked="" style="opacity: 0%">
+																	<input id="success1" type="radio" name="confirm_by" value="{{$member->confirm_by}}" checked="" style="opacity: 0%">
+																	<input id="success1" type="radio" name="komisi_confirm" value="{{$member->komisi_confirm}}" checked="" style="opacity: 0%">
 																	@method('patch') 
 																	<input id="success1" type="radio" name="komisi" value="1" checked="1" style="opacity: 0%">
 																</form>
 																<button class="btn btn-block btn-info" href="/home" onclick="event.preventDefault();document.getElementById('komisi2').submit();">Komisi 2</button> 
 																<form id="komisi2" action="{{route('absensi.update', $member->uuid)}}" method="POST" class="d-none"> 
 																	@csrf
+																	<input id="success1" type="radio" name="nama" value="{{$member->nama}}" checked="" style="opacity: 0%">
+																	<input id="success1" type="radio" name="member_id" value="{{$member->company['nama']}}" checked="" style="opacity: 0%">
+																	<input id="success1" type="radio" name="absensi" value="Masuk" checked="" style="opacity: 0%">
+																	<input id="success1" type="radio" name="komisi" value="2" checked="" style="opacity: 0%">
+																	<input id="success1" type="radio" name="confirm_by" value="{{$member->confirm_by}}" checked="" style="opacity: 0%">
+																	<input id="success1" type="radio" name="komisi_confirm" value="{{$member->komisi_confirm}}" checked="" style="opacity: 0%">
 																	@method('patch') 
 																	<input id="success1" type="radio" name="komisi" value="2" checked="2" style="opacity: 0%">
 																</form>
 															
-																<button class="btn btn-block btn-primary" href="/home" onclick="event.preventDefault();document.getElementById('komisi3').submit();">Komisi 3</button> 
-																<form id="komisi3" action="{{route('absensi.update', $member->uuid)}}" method="POST" class="d-none"> 
+																<button class="btn btn-block btn-primary" href="/home" onclick="event.preventDefault();document.getElementById('komisi3').submit();">Komisi 3</button>
+																	<form id="komisi3" action="{{route('absensi.update', $member->uuid)}}" method="POST" class="d-none"> 
 																	@csrf
+																	<input id="success1" type="radio" name="nama" value="{{$member->nama}}" checked="" style="opacity: 0%">
+																	<input id="success1" type="radio" name="member_id" value="{{$member->company['nama']}}" checked="" style="opacity: 0%">
+																	<input id="success1" type="radio" name="absensi" value="Masuk" checked="" style="opacity: 0%">
+																	<input id="success1" type="radio" name="komisi" value="3" checked="" style="opacity: 0%">
+																	<input id="success1" type="radio" name="confirm_by" value="{{$member->confirm_by}}" checked="" style="opacity: 0%">
+																	<input id="success1" type="radio" name="komisi_confirm" value="{{$member->komisi_confirm}}" checked="" style="opacity: 0%"> 
 																	@method('patch') 
 																	<input id="success1" type="radio" name="komisi" value="3" checked="3" style="opacity: 0%">
 																</form>		
@@ -92,12 +117,6 @@
 				                              	</div>
 				                            </div>
 				                            @endif
-
-										
-
-							
-
-
 											@role('superadministrator')
 					                          <button class="btn btn-block btn-outline-info icheck-material-primary" data-toggle="modal" data-target="#smallsizemodal">QRCODE</button>
 					                          <!-- Modal -->
@@ -115,10 +134,7 @@
 					                              </div>
 					                            </div>
 					                    	@endrole 
-
-
 									</div>
-									
                                 </div>
                             </div>
                         </div>

@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\absensi;
 use App\Models\member;
 use App\Models\company;
+use App\LogDB;
 use Illuminate\Http\Request;
 use DB;
 use Auth;
@@ -121,7 +122,7 @@ class AbsensiController extends Controller
             'komisi_confirm_at'
         ]);
 
-        $member = Member::where('kehadiran', 'hadir');
+        $member = Member::where('uuid', $id)->first();
         DB::beginTransaction();
 
         try {
@@ -132,17 +133,27 @@ class AbsensiController extends Controller
                     'confirm_at' => now(),
 
                 ];
-            }elseif($request->has('komisi')){
+               
+
+            }if($request->has('komisi')) {
                 $data = [
                     'komisi' => $request->komisi,
                     'komisi_confirm' => Auth::user()->name,
                     'komisi_confirm_at' => now(),
                 ];
-            }
                 
-            
+            }
+             $member->update($data); 
+             $absensi = Absensi::create([
+                    'nama' => $request->nama,
+                    'member_id' => $request->member_id,
+                    'absensi' => $request->absensi,
+                    'komisi' => $request->komisi,
+                    'confirm_by' => Auth::user()->name,
+                    'komisi_confirm' => Auth::user()->name,
+                ]);
 
-            $member->update($data);
+           
             DB::commit();
 
             return redirect('/home');
