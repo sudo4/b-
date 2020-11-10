@@ -14,12 +14,12 @@ class CreateMembersTable extends Migration
     public function up()
     {
         Schema::create('members', function (Blueprint $table) {
-            $table->bigIncrements('id');
+            $table->id();
             $table->uuid('uuid');
             $table->string('nama');
-            $table->string('company_id');
+            $table->string('company_id')->nullable();
             $table->string('no_hp', 12)->unique();
-            $table->text('photo');
+            $table->text('photo')->nullable();
             $table->enum('kehadiran', ['hadir', 'tidak_hadir'])->nullable();
             $table->enum('absensi', ['Masuk', 'Keluar'])->nullable();
             $table->enum('komisi', ['1', '2', '3'])->nullable();

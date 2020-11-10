@@ -17,11 +17,11 @@ class CreateCompaniesTable extends Migration
             $table->id();
             $table->uuid('uuid');
             $table->string('nama');
-            $table->string('sippmi')->unique();
-            $table->text('alamat');
-            $table->string('telp_kantor')->unique();
+            $table->string('sippmi')->unique()->nullable();
+            $table->text('alamat')->nullable();
+            $table->string('telp_kantor')->unique()->nullable();
             $table->string('telp_kantor2')->unique()->nullable();
-            $table->string('surel')->unique();
+            $table->string('surel')->unique()->nullable();
             $table->softDeletes();
             $table->timestamps();
         });

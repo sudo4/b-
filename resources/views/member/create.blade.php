@@ -44,19 +44,18 @@
                                 
                                 <div class="form-group">
                                     <input type="number" class="form-control" id="input-1" autocomplete="off" placeholder="Masukkan Nomor Ponsel" required name="no_hp" value="{{old('no_hp')}}">
+                                    <input id="primary1" type="radio" name="kehadiran" value="tidak_hadir" checked="tidak_hadir" class="d-none">
                                 </div>
-                                <div class="form-group"> <input type="file" id="input-file-now" class="dropify" name="photo" /></div>
-                                
-
+                                <div class="form-group"> 
+                                    <input type="file" id="input-file-now" class="dropify" name="photo" />
+                                </div>
                                 <div class="form-group">
                                     <div class="form-group">
-                                          <button type="submit" class="btn btn-primary icheck-material-primary"> 
-                                            <input id="primary1" type="radio" name="kehadiran" value="tidak_hadir" checked="tidak_hadir" style="opacity: 0%">
-                                            Simpan
-                                            <input id="primary1" type="radio" name="kehadiran" style="opacity: 0%">
-
-                                          </button>
-                                        </div>
+                                      <button type="submit" class="btn btn-primary icheck-material-primary"> 
+                                        
+                                        Simpan
+                                      </button>
+                                    </div>
                                 </div>
                             </div>
                         </div>
